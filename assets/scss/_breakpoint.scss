@@ -1,0 +1,18 @@
+@use "./variables" as *;
+@mixin mobile() {
+  @media screen and (max-width: $mobileWidth) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: $tabletWidth) {
+    @content;
+  }
+}
+
+@mixin responseFirst() {
+  @media (max-width: 1293px) {
+    @content;
+  }
+}
