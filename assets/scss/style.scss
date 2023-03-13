@@ -727,6 +727,7 @@ iframe.skiptranslate {
   top: 0;
   background: #ffffffcf;
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
   &.show {
