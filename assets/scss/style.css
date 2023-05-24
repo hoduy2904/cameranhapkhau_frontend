@@ -41,6 +41,24 @@ a,
   color: inherit;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.text-yellow {
+  color: #fe8c23;
+}
+
+.form-control {
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+}
+
 .section {
   margin: 4rem 0;
 }
@@ -902,12 +920,17 @@ iframe.skiptranslate {
   color: #3bb77e;
 }
 
-.product-details {
+.product-details, .review-product {
   border: 1px solid #ececec;
   border-radius: 5px;
 }
 
+.tabs {
+  display: flex;
+  overflow: auto;
+}
 .tabs .tab-item {
+  white-space: nowrap;
   border: none;
   padding: 20px 25px;
   background: #fff;
@@ -934,9 +957,96 @@ iframe.skiptranslate {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  .promotes {
+    display: none;
+  }
+}
 .promotes .promote-item {
   border-radius: 5px;
   font-family: inherit;
+}
+
+.star > i {
+  color: #fe8c23;
+}
+
+.review-product {
+  padding: 20px;
+}
+.review-product .wrap-review {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+}
+.review-product .wrap-review::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent;
+}
+.review-product .general-review {
+  height: -moz-fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 0;
+}
+
+.total-rating {
+  display: inline-flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.total-rating .point {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fe8c23;
+}
+
+.progress-rating li {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.progress-rating .number-star, .progress-rating .percent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30px;
+  text-align: left;
+  font-size: 1.3rem;
+}
+.progress-rating .timeline-star, .progress-rating .timeline-star .timing {
+  background-color: #ccc;
+  height: 4px;
+  width: 100%;
+}
+.progress-rating .timeline-star .timing {
+  background-color: #fe8c23;
+}
+.progress-rating .percent {
+  font-weight: bold;
+  color: #253d4e;
+}
+
+.comment .comment-item {
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
+}
+.comment .comment-item .comment-name {
+  font-weight: bold;
+}
+.comment .comment-item .comment-name::after {
+  content: " - ";
+  width: 5px;
+}
+.comment .comment-item .comment-date {
+  color: #7e7e7e;
+  font-size: 1.3rem;
+}
+.comment .comment-item .comment-content {
+  font-size: 1.4rem;
 }
 
 @keyframes fadeIn {

@@ -34,6 +34,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@import "./general";
+
 .section {
   margin: 4rem 0;
 }
@@ -583,7 +586,6 @@ a {
   font-size: 1.3rem;
   font-weight: 600;
   border-radius: 50px;
-
 }
 .products {
   padding: 20px 0;
