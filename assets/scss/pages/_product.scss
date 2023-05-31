@@ -167,7 +167,7 @@
 
   .wrap-review {
     position: relative;
-    max-height: 300px;
+    max-height: 400px;
     overflow: auto;
     &::-webkit-scrollbar {
       width: 0; /* Remove scrollbar space */
@@ -178,6 +178,8 @@
     height: fit-content;
     position: sticky;
     top: 0;
+    background: $whiteColor;
+    z-index: 1;
   }
 }
 .total-rating {

@@ -976,7 +976,7 @@ iframe.skiptranslate {
 }
 .review-product .wrap-review {
   position: relative;
-  max-height: 300px;
+  max-height: 400px;
   overflow: auto;
 }
 .review-product .wrap-review::-webkit-scrollbar {
@@ -988,6 +988,8 @@ iframe.skiptranslate {
   height: fit-content;
   position: sticky;
   top: 0;
+  background: #fff;
+  z-index: 1;
 }
 
 .total-rating {
