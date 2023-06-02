@@ -10,6 +10,14 @@
   font-size: 1.5rem;
 }
 .btn {
+  border-radius: 5px;
   font-size: 1.5rem;
   padding: 10px 15px;
+  &.btn-primary {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+}
+.form-control {
+  border-radius: 5px;
 }

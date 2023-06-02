@@ -10,6 +10,12 @@
     }
   }
 }
+.box-detail-product {
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
 .sub-image__product {
   margin-top: 20px;
   .sub-image__item {
@@ -17,12 +23,69 @@
     border: 2px solid transparent;
     margin: 0 10px;
     &.slick-current {
-      border: 2px solid $greenSecodaryColor;
+      border: 2px solid $secondaryColor;
       border-radius: $borderRadius;
     }
     cursor: pointer;
     img {
       width: 100%;
+    }
+  }
+}
+.product-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: {
+    top: 10px;
+    bottom: 25px;
+  }
+}
+.select-buy {
+  margin: 10px 0;
+  overflow: hidden;
+  .box-title {
+    font-weight: 700;
+    color: #444;
+  }
+  .select-list {
+    .select-item {
+      cursor: pointer;
+      border: 1px solid #cdcdcd;
+      margin-right: 1.5rem;
+      float: left;
+      padding: 10px;
+      border-radius: 8px;
+
+      &.active {
+        position: relative;
+        border-color: $primaryColor;
+        &::after {
+          background-color: $primaryColor;
+          border-radius: 5px 0 10px 0;
+          color: #fff;
+          content: "✓";
+          font-size: 10px;
+          height: 13px;
+          left: 0;
+          padding-bottom: 15px;
+          padding-left: 4px;
+          position: absolute;
+          top: 0;
+          width: 18px;
+        }
+
+        .select-price {
+          color: $redColor;
+        }
+      }
+
+      .select-condition {
+        font-size: 13px;
+      }
+      .select-price {
+        font-size: 15px;
+        font-weight: 700;
+      }
     }
   }
 }
@@ -36,18 +99,15 @@
     margin-bottom: 2rem;
   }
   .tools {
+    font-weight: 600;
     display: flex;
     color: $primaryColor;
     > :first-child {
       margin-right: 20px;
     }
   }
-  .product-name {
-    font-size: 3rem;
-    font-weight: 600;
-  }
   .price {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     .old-price {
       font-size: 2rem;
@@ -56,11 +116,12 @@
   .description-short {
     color: $secondaryColor;
   }
+
   .product-extra {
     flex-wrap: wrap;
     display: flex;
     column-gap: 10px;
-    margin-top: 3rem;
+    margin-top: 1rem;
     .product-qty {
       padding: 10px;
       border-radius: 5px;
@@ -87,7 +148,7 @@
     .add-to-card {
       @extend %btn;
       color: $whiteColor;
-      background: $greenSecodaryColor;
+      background: $primaryColor;
     }
     .buy-now {
       color: $whiteColor;
@@ -105,9 +166,9 @@
     margin: 5px 0;
     font-size: 14px;
     color: $secondaryColor;
-    font-weight: 400;
+    font-weight: 600;
     span:last-child {
-      color: $greenSecodaryColor;
+      color: $blackColor;
     }
   }
 }
@@ -150,7 +211,6 @@
     display: none;
   }
   .promote-item {
-    border-radius: 5px;
     font-family: inherit;
   }
 }
@@ -167,8 +227,13 @@
 
   .wrap-review {
     position: relative;
-    max-height: 400px;
+    max-height: 500px;
     overflow: auto;
+    @include mobile {
+      position: relative;
+      max-height: 660px;
+      overflow: auto;
+    }
     &::-webkit-scrollbar {
       width: 0; /* Remove scrollbar space */
       background: transparent;
@@ -224,6 +289,17 @@
   }
 }
 .comment {
+  &.mobile {
+    display: none;
+    @include mobile {
+      display: block;
+      height: 255px;
+      overflow: auto;
+    }
+  }
+  @include mobile {
+    display: none;
+  }
   .comment-item {
     padding: 10px;
     border-bottom: 1px solid $lineColor;
@@ -242,6 +318,35 @@
     }
     .comment-content {
       font-size: 1.4rem;
+    }
+  }
+}
+.special-offer {
+  border: 1px solid $redColor;
+  border-radius: $borderRadius;
+  .special-offer-title {
+    padding: 5px 10px;
+    background-color: rgba($redColor, 0.2);
+    color: $redColor;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .special-offer-item {
+    padding: 5px 10px;
+
+    .special-offer-number {
+      width: 20px;
+      float: left;
+      p {
+        text-align: center;
+        font-size: 10px;
+        color: $whiteColor;
+        font-weight: 600;
+        background-color: $redColor;
+        border-radius: 50px;
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }
