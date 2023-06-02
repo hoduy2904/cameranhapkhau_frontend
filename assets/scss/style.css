@@ -164,6 +164,12 @@ a,
   font-size: 3rem;
   display: none;
 }
+@media screen and (max-width: 1042px) {
+  .header .mobile-menu {
+    display: block;
+    flex: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   .header .mobile-menu {
     flex: 1;
@@ -386,6 +392,16 @@ a,
   color: yellow;
 }
 
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+  color: #252525;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1042px) {
+  .wrap-navbar {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .wrap-navbar {
     display: none;

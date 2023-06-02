@@ -125,6 +125,10 @@ a {
     color: $whiteColor;
     font-size: 3rem;
     display: none;
+    @include tablet {
+      display: block;
+      flex: 1;
+    }
     @include mobile {
       flex: 1;
       display: block;
@@ -350,8 +354,15 @@ a {
     color: yellow;
   }
 }
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+  color: $blackColor;
+  font-weight: 600;
+}
 
 .wrap-navbar {
+  @include tablet {
+    display: none;
+  }
   @include mobile {
     display: none;
   }
