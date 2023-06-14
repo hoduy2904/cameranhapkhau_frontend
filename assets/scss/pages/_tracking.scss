@@ -1,0 +1,28 @@
+.tracking {
+  box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.1);
+  border-radius: $borderRadius;
+  padding: 20px;
+  .tracking-filter {
+    overflow: hidden;
+    column-gap: 10px;
+  }
+  .category-title {
+    .main-title {
+      font-size: 1.5rem;
+    }
+  }
+  table.table {
+    thead {
+      background: $primaryColor;
+      color: $whiteColor;
+      font-weight: 600;
+    }
+    tbody tr {
+      text-align: center;
+
+      td:nth-child(2) {
+        text-align: left;
+      }
+    }
+  }
+}

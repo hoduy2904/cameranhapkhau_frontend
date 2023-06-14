@@ -13,6 +13,7 @@
   border-radius: 5px;
   font-size: 1.5rem;
   padding: 10px 15px;
+  text-wrap: nowrap;
   &.btn-primary {
     background-color: $primaryColor;
     border-color: $primaryColor;
@@ -20,6 +21,15 @@
 }
 .form-control {
   border-radius: 5px;
+  &.form-control-md {
+    padding: 18px;
+  }
+}
+.none-pt {
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .bg-white {

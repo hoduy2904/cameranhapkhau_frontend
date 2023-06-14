@@ -1,0 +1,36 @@
+.newsDetails {
+  h1.title {
+    font-weight: 600;
+  }
+  .userdetail {
+    font-size: 13px;
+    span:nth-child(1) {
+      color: $primaryColor;
+      font-weight: 600;
+    }
+    span {
+      color: $secondaryColor;
+    }
+  }
+  .news-infomartion {
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: $borderRadius;
+    }
+  }
+  .latest-news {
+    overflow: hidden;
+    .news {
+      .news-item {
+        padding: {
+          left: 5px;
+          right: 5px;
+        }
+        .title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
