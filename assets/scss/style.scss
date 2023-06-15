@@ -871,9 +871,19 @@ iframe.skiptranslate {
   }
 }
 
+.title {
+  font-size: 23px;
+  font-weight: 600;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
 //Product
 
 @import "./pages/product";
 @import "./pages/another";
 @import "./pages/tracking";
 @import "./pages/newsDetails";
+@import "./pages/cart";
