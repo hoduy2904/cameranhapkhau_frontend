@@ -914,6 +914,18 @@ iframe.skiptranslate {
   margin-bottom: 10px;
 }
 
+.nav-child ul {
+  color: #121226;
+  padding: 20px;
+}
+.nav-child ul li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+.nav-child ul li:hover {
+  color: #191970;
+}
+
 .image-product {
   aspect-ratio: 4/3;
   padding: 10px;

@@ -880,6 +880,19 @@ iframe.skiptranslate {
   }
 }
 
+.nav-child {
+  ul {
+    color: #121226;
+    padding: 20px;
+    li {
+      display: inline-block;
+      margin: 5px 10px;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
 //Product
 
 @import "./pages/product";
