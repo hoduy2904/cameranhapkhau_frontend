@@ -55,6 +55,60 @@
   }
 }
 
+.select-tick {
+  margin: 10px 0;
+  overflow: hidden;
+  .box-title {
+    font-weight: 700;
+    color: #444;
+  }
+  .select-list {
+    .select-item {
+      position: relative;
+      cursor: pointer;
+      border: 1px solid #cdcdcd;
+      margin-right: 1.5rem;
+      float: left;
+      padding: 10px;
+      border-radius: 8px;
+
+      &:has(.input-item:checked) {
+        border-color: $primaryColor;
+        &::after {
+          background-color: $primaryColor;
+          border-radius: 5px 0 10px 0;
+          color: #fff;
+          content: "✓";
+          font-size: 10px;
+          height: 13px;
+          left: 0;
+          padding-bottom: 15px;
+          padding-left: 4px;
+          position: absolute;
+          top: 0;
+          width: 18px;
+        }
+
+        .select-price {
+          color: $redColor;
+        }
+      }
+
+      .select-condition {
+        font-size: 13px;
+      }
+      .select-price {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .input-item {
+        display: none;
+      }
+    }
+  }
+}
+
 .bg-white {
   background: $whiteColor;
 }
