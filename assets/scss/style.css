@@ -518,6 +518,7 @@ a,
 }
 .wrap-navbar .nav .nav-item .nav-child {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: auto;
   visibility: hidden;
   opacity: 0;
   transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -528,6 +529,13 @@ a,
   position: absolute;
   height: 100%;
   background: #fff;
+}
+.wrap-navbar .nav .nav-item .nav-child::-webkit-scrollbar-thumb {
+  background: #191970;
+  border-radius: 10px;
+}
+.wrap-navbar .nav .nav-item .nav-child::-webkit-scrollbar {
+  width: 3px;
 }
 .wrap-navbar .nav .nav-item:hover {
   color: #191970;
