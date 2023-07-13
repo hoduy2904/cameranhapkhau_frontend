@@ -430,8 +430,13 @@ a {
 .banner {
   border-radius: 20px;
   width: 100%;
+  visibility: hidden;
   img {
-    @extend .banner;
+    border-radius: 20px;
+    width: 100%;
+  }
+  &.slick-initialized {
+    visibility: visible;
   }
 }
 .category {
@@ -496,7 +501,18 @@ a {
   }
 }
 
+.flash-sale__products {
+  visibility: hidden;
+  &.slick-initialized {
+    visibility: visible;
+  }
+}
+
 .slide-lazy {
+  visibility: hidden;
+  &.slick-initialized {
+    visibility: visible;
+  }
   .prev {
     @extend %share-product-slide-prev;
   }
@@ -887,6 +903,7 @@ iframe.skiptranslate {
     li {
       display: inline-block;
       margin: 5px 10px;
+      width: 22%;
       &:hover {
         color: $primaryColor;
       }
