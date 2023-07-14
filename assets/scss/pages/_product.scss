@@ -17,7 +17,13 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .sub-image__product {
+  visibility: hidden;
   margin-top: 20px;
+  max-height: 112px;
+
+  &.slick-initialized {
+    visibility: visible;
+  }
   .sub-image__item {
     padding: 10px;
     border: 2px solid transparent;

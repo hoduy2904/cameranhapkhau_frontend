@@ -84,6 +84,6 @@ $('.sub-image__product').slick({
   slidesToScroll: 1,
   asNavFor: '.image-product',
   dots: true,
-  centerMode: true,
+  centerMode: false,
   focusOnSelect: true
 });
