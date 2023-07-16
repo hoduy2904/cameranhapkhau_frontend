@@ -40,9 +40,14 @@
 }
 .product-name {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   margin: {
     bottom: 8px;
+  }
+}
+.product-rate{
+  p{
+    color: $secondaryColor;
   }
 }
 
@@ -64,10 +69,10 @@
     }
   }
   .price {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     .old-price {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     .vat-info {
       font-weight: normal;
@@ -76,6 +81,7 @@
     }
   }
   .description-short {
+    font-size: 1.4rem;
     color: $secondaryColor;
   }
 
@@ -102,28 +108,52 @@
     }
     %btn {
       margin-top: 5px;
-      padding: 10px 15px;
+      padding: 15px;
       font-weight: 600;
       border: none;
-      border-radius: $borderRadius;
+      border-radius: $borderRadiusButton;
     }
     .add-to-card {
       @extend %btn;
       color: $whiteColor;
       background: $primaryColor;
+      flex:1;
+      &:hover{
+        background: $primaryBoldColor;
+      }
     }
     .buy-now {
       color: $whiteColor;
       background: $redColor;
       @extend %btn;
+      width: 100%;
+      &:hover{
+        background: $darkRedColor;
+      }
     }
     .compare {
+      flex:1;
       background: $whiteColor;
       @extend %btn;
-      border: 1px solid $lineColor;
-      color: $secondaryColor;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;;
+      &:hover{
+        background: $primaryColor;
+        color: $whiteColor;
+        i{
+          @include svg{
+            fill: $whiteColor;
+          }
+        }
+      }
+      .icon.compare-icon{
+        @include svg{
+          fill: $primaryColor;
+        }
+      }
     }
   }
+  
   .product-parameter {
     margin: 5px 0;
     font-size: 14px;
@@ -284,10 +314,10 @@
   }
 }
 .special-offer {
-  border: 1px solid $redColor;
-  border-radius: $borderRadius;
+  border: 1px solid rgba($redColor,0.2);
+  border-radius: $borderRadiusButton;
   .special-offer-title {
-    padding: 5px 10px;
+    padding: 10px;
     background-color: rgba($redColor, 0.2);
     color: $redColor;
     font-weight: bold;

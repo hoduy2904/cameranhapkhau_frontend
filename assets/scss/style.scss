@@ -69,7 +69,7 @@ a {
   }
   width: 100%;
   padding: 1px 10px;
-  background: $blackColor;
+  background: $primaryMinLightColor;
 
   ul {
     list-style: none;
@@ -79,16 +79,17 @@ a {
 
       &:not(:last-child)::after {
         content: "|";
-        color: #cdcdcd;
+        color: $primaryColor;
       }
       a {
+        font-weight: 600;
         font-size: 1.4rem;
         padding: 0 5px;
-        color: #cdcdcd;
+        color: $primaryColor;
         transition: color 0.3s ease-out;
         &.active {
           cursor: pointer;
-          color: $greenSecodaryColor;
+          color: $primaryBoldColor;
           font-weight: 600;
         }
       }
@@ -100,14 +101,14 @@ a {
         color: $primaryLightColor;
       }
       &:hover > a {
-        color: $whiteColor;
+        color: $primaryBoldColor;
       }
     }
   }
 }
 
 .header {
-  background: $primaryColor;
+  background: $whiteColor;
   padding: 20px 0;
 
   &.stick {
@@ -163,7 +164,8 @@ a {
 .wrap-navbar {
   border-bottom: 1px solid $lineColor;
   border-top: 1px solid $lineColor;
-  padding: 10px 0;
+  padding: 4px 0;
+  background: $primaryColor;
 }
 
 .navbar {
@@ -177,15 +179,14 @@ a {
     font-size: 1.5rem;
     color: $whiteColor;
     font-weight: 600;
-    background: $primaryColor;
+    background: $primaryBoldColor;
     padding: 10px 15px;
-    border-radius: $borderRadius;
+    border-radius: 4px;
   }
 
   .menu-icon {
-    font-size: 2.6rem;
-    color: $whiteColor;
     cursor: pointer;
+    margin-right: 5px;
   }
 
   .contact {
@@ -215,11 +216,11 @@ a {
     @include flex(center, unset);
     i {
       margin-right: 12px;
-      font-size: 3.8rem;
+      font-size: 2.6rem;
     }
     p {
-      color: $primaryColor;
-      font-size: 2.6rem;
+      color: $whiteColor;
+      font-size: 2.4rem;
       font-weight: 700;
       font-family: "Quicksand", sans-serif;
       display: block;
@@ -229,7 +230,7 @@ a {
         font-weight: 500;
         font-size: 1.4rem;
         font-family: "Lato", sans-serif;
-        color: #7e7e7e;
+        color: $whiteColor;
         display: block;
         letter-spacing: 0.9px;
       }
@@ -240,10 +241,10 @@ a {
   .nav-item {
     padding: 0 15px;
     font-weight: 600;
-    color: $blackColor;
+    color: $whiteColor;
 
     &:hover {
-      color: $primaryColor;
+      color: $primaryLightColor;
     }
   }
 }
@@ -253,7 +254,7 @@ a {
   display: flex;
   background-color: $whiteColor;
   border-radius: $borderRadius;
-  border: 1px solid $whiteColor;
+  border: 1px solid $primaryColor;
   width: 550px;
   @include tablet {
     width: 400px;
@@ -304,6 +305,39 @@ a {
     }
   }
 }
+
+// Icon
+.icon{
+  @include svg{
+    fill: $blackColor;
+  }
+  &.search-icon{
+    @include svg{
+      fill: $secondaryColor;
+    }
+  }
+  &.icon-headphones{
+    @include svg{
+      fill: $whiteColor;
+    }
+  }
+  &.gift-icon{
+    @include svg{
+      fill: $redColor;
+    }
+  }
+  &.money-icon{
+    @include svg{
+      fill: $whiteColor;
+    }
+  }
+  &.cart-plus-icon{
+    @include svg{
+      fill: $whiteColor;
+    }
+  }
+}
+
 .action {
   @include mobile {
     justify-content: flex-end;
@@ -318,15 +352,26 @@ a {
     position: relative;
 
     > i {
-      color: $whiteColor;
+      color: $primaryColor;
       font-size: 2.4rem;
+    }
+
+    &:hover{
+      span{
+        color: $primaryColor;
+      }
+      i{
+        @include svg{
+          fill: $primaryColor;
+        }
+      }
     }
   }
   span {
     @include mobile {
       display: none;
     }
-    color: $whiteColor;
+    color: $blackColor;
     font-weight: 500;
   }
   .badge {
@@ -334,9 +379,9 @@ a {
     background: $redColor;
     padding: 5px;
     border-radius: 50px;
-    color: $primaryColor;
+    color: $whiteColor;
     left: 15px;
-    top: -17px;
+    top: -10px;
     font-size: 0.9rem;
   }
 }
@@ -769,6 +814,18 @@ a {
       font-size: 1.4rem;
     }
   }
+  .rating{
+    display: flex;
+    align-items: center;
+    .avg-rate{
+      color: $redColor;
+      font-weight: 600;
+    }
+    span{
+      color: $secondaryColor;
+      font-weight: 600;
+    }
+  }
   .add-to-cart {
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
     cursor: pointer;
@@ -906,6 +963,7 @@ iframe.skiptranslate {
 }
 
 .breadcrumb {
+  font-weight: 500;
   font-size: 1.4rem;
   background: $whiteColor;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),

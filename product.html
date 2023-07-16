@@ -27,7 +27,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/scss/style.css" />
-    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="./assets/vendor/slick/slick.css" />
     <link rel="stylesheet" href="./assets/vendor/slick/slick-theme.css" />
   </head>
@@ -70,25 +69,62 @@
                 class="form-control search-input"
               />
               <button class="btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="icon search-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                    />
+                  </svg>
+                </div>
               </button>
             </div>
           </div>
           <div class="action d-flex">
             <a href="#" class="action-item">
-              <i class="fa-solid fa-code-compare"></i>
+              <i class="icon compare-icon">
+                <svg
+                  class="svg-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="white"
+                  viewBox="0 0 512 512"
+                  role="img"
+                >
+                  <path
+                    class=""
+                    d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1s14.2 12.4 14.2 21.9v48h16c39.8 0 72-32.2 72-72V156.3c-32.5-10.2-56-40.5-56-76.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 35.8-23.5 66.1-56 76.3V320c0 66.3-53.7 120-120 120H320v48zM464 80a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM192 24c0-9.5 5.6-18.1 14.2-21.9s18.8-2.3 25.8 4.1l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1s-14.2-12.4-14.2-21.9V120H176c-39.8 0-72 32.2-72 72V355.7c32.5 10.2 56 40.5 56 76.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-35.8 23.5-66.1 56-76.3V192c0-66.3 53.7-120 120-120h16V24zM48 432a32 32 0 1 0 64 0 32 32 0 1 0 -64 0z"
+                  />
+                </svg>
+              </i>
               <span>So sánh</span>
               <div class="badge">10</div>
             </a>
 
             <a href="#" class="action-item">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="icon cart-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M24.7767 9.57857C24.7427 9.01205 24.2728 8.57042 23.7053 8.57142H19.4196V5.35714C19.4196 2.39846 17.0211 0 14.0624 0C11.1037 0 8.70528 2.39846 8.70528 5.35714V8.57142H4.41957C3.85204 8.57042 3.38215 9.01205 3.34814 9.57857L2.40528 26.6036C2.3047 28.3759 3.65992 29.8942 5.43227 29.9948C5.49461 29.9984 5.55709 30.0001 5.61957 30H22.516C24.2912 30.0029 25.7326 28.5661 25.7354 26.7909C25.7356 26.7284 25.7338 26.6659 25.7303 26.6036L24.7767 9.57857ZM10.8481 5.35714C10.8481 3.58192 12.2872 2.14286 14.0624 2.14286C15.8376 2.14286 17.2767 3.58192 17.2767 5.35714V8.57142H10.8481V5.35714ZM12 12C12 12.6627 11.4628 13.2 10.8 13.2C10.1373 13.2 9.60002 12.6627 9.60002 12C9.60002 11.3373 10.1373 10.8 10.8 10.8C11.4628 10.8 12 11.3373 12 12ZM18 13.2C18.6628 13.2 19.2 12.6627 19.2 12C19.2 11.3373 18.6628 10.8 18 10.8C17.3373 10.8 16.8 11.3373 16.8 12C16.8 12.6627 17.3373 13.2 18 13.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </i>
               <span>Giỏ hàng</span>
               <div class="badge">10</div>
-            </a>
-            <a href="#" class="action-item">
-              <i class="fa-solid fa-phone"></i>
-              <span>Hỗ trợ</span>
             </a>
             <div id="google_translate_element"></div>
           </div>
@@ -98,7 +134,58 @@
         <nav class="navbar container">
           <div class="d-flex menu-bar">
             <div class="menu-bar__title">
-              <i class="fa-solid fa-border-all mr-3"></i>
+              <i class="icon menu-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 26.99 26.99"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 1.8px;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <line
+                        x1="7.06"
+                        y1="7.52"
+                        x2="19.92"
+                        y2="7.52"
+                        class="cls-1"
+                      ></line>
+                      <line
+                        x1="7.06"
+                        y1="13.49"
+                        x2="19.92"
+                        y2="13.49"
+                        class="cls-1"
+                      ></line>
+                      <line
+                        x1="7.06"
+                        y1="19.47"
+                        x2="11.95"
+                        y2="19.47"
+                        class="cls-1"
+                      ></line>
+                      <rect
+                        x="0.9"
+                        y="0.9"
+                        width="25.19"
+                        height="25.19"
+                        rx="4.71"
+                        class="cls-1"
+                      ></rect>
+                    </g>
+                  </g></svg
+              ></i>
               <span> DANH MỤC SẢN PHẨM</span>
             </div>
             <div class="sidebar">
@@ -137,7 +224,7 @@
           <div class="tools">
             <ul class="navbar-nav flex-row">
               <li class="nav-item">
-                <a href="#" class="nav-link">Trang chủ</a>
+                <a href="#" class="nav-link"> Trang chủ</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">Giới thiệu</a>
@@ -162,7 +249,17 @@
             </ul>
           </div>
           <div class="hotline">
-            <i class="fa-solid fa-headphones-simple"></i>
+            <i class="icon icon-headphones"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M256 80C141.1 80 48 173.1 48 288V392c0 13.3-10.7 24-24 24s-24-10.7-24-24V288C0 146.6 114.6 32 256 32s256 114.6 256 256V392c0 13.3-10.7 24-24 24s-24-10.7-24-24V288c0-114.9-93.1-208-208-208zM80 352c0-35.3 28.7-64 64-64h16c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V352zm288-64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V320c0-17.7 14.3-32 32-32h16z"
+                /></svg
+            ></i>
             <p>
               034.8700.100
               <span>Trung tâm hỗ trợ 24/7 </span>
@@ -217,6 +314,30 @@
                 <h1 class="product-name">
                   Chuông cửa IP không dây HIKVISION DS-KB6403-WIP
                 </h1>
+                <div class="d-flex items-center product-rate">
+                  <div class="mr-3 w-px bg-ddv max-md:hidden">
+                    <i class="icon icon-star">
+                      <img src="/assets/icons/starFill.svg" alt="" />
+                    </i>
+                    <i class="icon icon-star">
+                      <img src="/assets/icons/starFill.svg" alt="" />
+                    </i>
+                    <i class="icon icon-star">
+                      <img src="/assets/icons/star.svg" alt="" />
+                    </i>
+                    <i class="icon icon-star">
+                      <img src="/assets/icons/star.svg" alt="" />
+                    </i>
+                    <i class="icon icon-star">
+                      <img src="/assets/icons/star.svg" alt="" />
+                    </i>
+                  </div>
+                  <p class="text-sm m-0">
+                    <span class="font-bold text-ddv">1 </span>Đánh giá
+                  </p>
+                  <div class="mx-2 h-4"></div>
+                  <p class="text-sm max-md:hidden m-0">SKU: 3400000004213</p>
+                </div>
                 <div class="price my-2">
                   <span class="current-price">1.589.000đ</span>
                   <span class="old-price">1.889.000đ</span>
@@ -289,7 +410,18 @@
 
                 <div class="special-offer">
                   <div class="special-offer-title">
-                    <i class="fa-solid fa-gift"></i> Khuyến mãi đặc biệt
+                    <i class="icon gift-icon mr-1">
+                      <svg
+                        height="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M152 0H154.2C186.1 0 215.7 16.91 231.9 44.45L256 85.46L280.1 44.45C296.3 16.91 325.9 0 357.8 0H360C408.6 0 448 39.4 448 88C448 102.4 444.5 115.1 438.4 128H480C497.7 128 512 142.3 512 160V224C512 241.7 497.7 256 480 256H32C14.33 256 0 241.7 0 224V160C0 142.3 14.33 128 32 128H73.6C67.46 115.1 64 102.4 64 88C64 39.4 103.4 0 152 0zM190.5 68.78C182.9 55.91 169.1 48 154.2 48H152C129.9 48 112 65.91 112 88C112 110.1 129.9 128 152 128H225.3L190.5 68.78zM360 48H357.8C342.9 48 329.1 55.91 321.5 68.78L286.7 128H360C382.1 128 400 110.1 400 88C400 65.91 382.1 48 360 48V48zM32 288H224V512H80C53.49 512 32 490.5 32 464V288zM288 512V288H480V464C480 490.5 458.5 512 432 512H288z"
+                        ></path>
+                      </svg>
+                    </i>
+                    Khuyến mãi đặc biệt
                   </div>
                   <ul class="special-offer-item">
                     <li>
@@ -302,21 +434,73 @@
                     </li>
                   </ul>
                 </div>
-                <div class="description-short mt-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                  vel qui tempora porro fuga blanditiis, temporibus natus quia
-                  reiciendis, iste corrupti fugiat mollitia itaque excepturi
-                  libero minima beatae? Laboriosam atque possimus ratione.
+                <div class="select-tick">
+                  <p class="box-title">Thông số chung</p>
+                  <div class="description-short">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Culpa vel qui tempora porro fuga blanditiis, temporibus
+                    natus quia reiciendis, iste corrupti fugiat mollitia itaque
+                    excepturi libero minima beatae? Laboriosam atque possimus
+                    ratione.
+                  </div>
                 </div>
                 <div class="product-extra">
-                  <button class="add-to-card">
-                    <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
-                  </button>
                   <button class="buy-now">
-                    <i class="fa-solid fa-cart-flatbed"></i> Mua ngay
+                    <i class="icon money-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        class="svg-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 576 512"
+                        role="img"
+                      >
+                        <path
+                          class=""
+                          d="M265.7 407.9c4.5-1.1 9-2.3 13.5-3.4l0 0c55.9-14.3 119.4-30.6 185.3-28.7c4.1-31.4 30.9-55.7 63.5-55.7V144c-35.3 0-63.9-28.6-64-63.9c-47-1.7-96.8 9.5-153.7 24c-4.5 1.1-9 2.3-13.5 3.5l0 0c-55.9 14.3-119.4 30.6-185.3 28.7C107.4 167.7 80.5 192 48 192V368c35.3 0 63.9 28.6 64 63.9c47 1.7 96.8-9.5 153.7-24zM0 421.5V113C0 88.8 25.4 72.7 48.4 79C128.2 101 208.1 80.6 288 60.3c86.9-22.1 173.8-44.3 260.7-12C565.8 54.6 576 72 576 90.5V399c0 24.3-25.4 40.3-48.3 34C447.8 411 367.9 431.4 288 451.7c-86.9 22.1-173.8 44.3-260.7 12C10.2 457.4 0 440 0 421.5zM384 256c0 61.9-43 112-96 112s-96-50.1-96-112s43-112 96-112s96 50.1 96 112zM256 208c0 8.8 7.2 16 16 16v64h-8c-8.8 0-16 7.2-16 16s7.2 16 16 16h24 24c8.8 0 16-7.2 16-16s-7.2-16-16-16h-8V208c0-8.8-7.2-16-16-16H272c-8.8 0-16 7.2-16 16z"
+                        />
+                      </svg>
+                    </i>
+                    Mua ngay
+                  </button>
+                  <button class="add-to-card">
+                    <i class="icon cart-plus-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        class="svg-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 576 512"
+                        role="img"
+                      >
+                        <path
+                          class=""
+                          d="M0 24C0 10.7 10.7 0 24 0H69.5c26.9 0 50 19.1 55 45.5l37 194.5H459.2c10.9 0 20.4-7.3 23.2-17.8L528.8 49.8c3.4-12.8 16.6-20.4 29.4-16.9s20.4 16.6 16.9 29.4L528.7 234.7c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM344 24V126.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V24c0-13.3 10.7-24 24-24s24 10.7 24 24z"
+                        />
+                      </svg>
+                    </i>
+                    Thêm giỏ hàng
                   </button>
                   <button class="compare">
-                    <i class="fa-solid fa-code-compare"></i>
+                    <i class="icon compare-icon">
+                      <svg
+                        class="svg-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="white"
+                        viewBox="0 0 512 512"
+                        role="img"
+                      >
+                        <path
+                          class=""
+                          d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1s14.2 12.4 14.2 21.9v48h16c39.8 0 72-32.2 72-72V156.3c-32.5-10.2-56-40.5-56-76.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 35.8-23.5 66.1-56 76.3V320c0 66.3-53.7 120-120 120H320v48zM464 80a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM192 24c0-9.5 5.6-18.1 14.2-21.9s18.8-2.3 25.8 4.1l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1s-14.2-12.4-14.2-21.9V120H176c-39.8 0-72 32.2-72 72V355.7c32.5 10.2 56 40.5 56 76.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-35.8 23.5-66.1 56-76.3V192c0-66.3 53.7-120 120-120h16V24zM48 432a32 32 0 1 0 64 0 32 32 0 1 0 -64 0z"
+                        />
+                      </svg>
+                    </i>
+                    So sánh
                   </button>
                 </div>
                 <div class="row mt-5">
@@ -884,9 +1068,20 @@
                     <div class="infomation">
                       Bộ định tuyến không dây 4G LTE băng tần kép AC1200
                     </div>
-                    <div class="price my-3">
+
+                    <div class="price my-2">
                       <span class="old-price">1.889.000đ</span>
                       <span class="current-price">1.589.000đ</span>
+                    </div>
+                    <div class="rating">
+                      <div class="stars d-flex">
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                      </div>
+                      <span>(455)</span>
                     </div>
                     <div class="add-to-cart">
                       <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
@@ -911,9 +1106,20 @@
                     <div class="infomation">
                       Bộ định tuyến không dây 4G LTE băng tần kép AC1200
                     </div>
-                    <div class="price my-3">
+
+                    <div class="price my-2">
                       <span class="old-price">1.889.000đ</span>
                       <span class="current-price">1.589.000đ</span>
+                    </div>
+                    <div class="rating">
+                      <div class="stars d-flex">
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                      </div>
+                      <span>(455)</span>
                     </div>
                     <div class="add-to-cart">
                       <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
@@ -938,9 +1144,20 @@
                     <div class="infomation">
                       Bộ định tuyến không dây 4G LTE băng tần kép AC1200
                     </div>
-                    <div class="price my-3">
+
+                    <div class="price my-2">
                       <span class="old-price">1.889.000đ</span>
                       <span class="current-price">1.589.000đ</span>
+                    </div>
+                    <div class="rating">
+                      <div class="stars d-flex">
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                      </div>
+                      <span>(455)</span>
                     </div>
                     <div class="add-to-cart">
                       <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
@@ -965,9 +1182,20 @@
                     <div class="infomation">
                       Bộ định tuyến không dây 4G LTE băng tần kép AC1200
                     </div>
-                    <div class="price my-3">
+
+                    <div class="price my-2">
                       <span class="old-price">1.889.000đ</span>
                       <span class="current-price">1.589.000đ</span>
+                    </div>
+                    <div class="rating">
+                      <div class="stars d-flex">
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                      </div>
+                      <span>(455)</span>
                     </div>
                     <div class="add-to-cart">
                       <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
@@ -992,36 +1220,20 @@
                     <div class="infomation">
                       Bộ định tuyến không dây 4G LTE băng tần kép AC1200
                     </div>
-                    <div class="price my-3">
-                      <span class="old-price">1.889.000đ</span>
-                      <span class="current-price">1.589.000đ</span>
-                    </div>
-                    <div class="add-to-cart">
-                      <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
-                    </div>
-                  </div></a
-                >
-                <a href="/product.html"
-                  ><div class="product">
-                    <div class="product-promotion">-50%</div>
-                    <div class="image text-center">
-                      <img
-                        src="https://cameranhapkhau.com/thumb2/230x145/2/upload/sanpham/bo-phat-wifi-mesh-tplink-deco-e43pack-2389.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="product-category">Thiết bị mạng APTech</div>
-                    <div class="title">
-                      Bộ Phát Wifi Mesh TP-Link Deco E4(3-Pack)
-                    </div>
 
-                    <div class="status">sản phẩm mới</div>
-                    <div class="infomation">
-                      Bộ định tuyến không dây 4G LTE băng tần kép AC1200
-                    </div>
-                    <div class="price my-3">
+                    <div class="price my-2">
                       <span class="old-price">1.889.000đ</span>
                       <span class="current-price">1.589.000đ</span>
+                    </div>
+                    <div class="rating">
+                      <div class="stars d-flex">
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                        <img src="/assets/icons/starFill.svg" alt="" />
+                      </div>
+                      <span>(455)</span>
                     </div>
                     <div class="add-to-cart">
                       <i class="fa-solid fa-cart-plus"></i> Thêm giỏ hàng
