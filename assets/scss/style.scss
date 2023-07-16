@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 html {
   font-size: 62.5%;
@@ -247,6 +247,11 @@ a {
       color: $primaryLightColor;
     }
   }
+  &.mobile-menu{
+    .nav-item{
+      color: $blackColor;
+    }
+  }
 }
 
 .search-bar {
@@ -308,31 +313,41 @@ a {
 
 // Icon
 .icon{
-  @include svg{
+  @include svg-path{
     fill: $blackColor;
   }
   &.search-icon{
-    @include svg{
+    @include svg-path{
       fill: $secondaryColor;
     }
   }
   &.icon-headphones{
-    @include svg{
+    @include svg-path{
       fill: $whiteColor;
     }
   }
   &.gift-icon{
-    @include svg{
+    @include svg-path{
       fill: $redColor;
     }
   }
   &.money-icon{
-    @include svg{
+    @include svg-path{
       fill: $whiteColor;
     }
   }
   &.cart-plus-icon{
-    @include svg{
+    @include svg-path{
+      fill: $whiteColor;
+    }
+  }
+  &.xmark-icon{
+    @include fsvg(24px,24px){
+      fill: $secondaryColor;
+    }
+  }
+  &.bolt-icon{
+    @include path{
       fill: $whiteColor;
     }
   }
@@ -513,13 +528,15 @@ a {
   position: absolute;
   transform: translateY(-50%);
   z-index: 1;
-  font-size: 2.5rem;
+  @include fsvg(2.5rem, 2.5rem){
+    fill: $secondaryColor;
+  }
   transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
     right 0.3s ease-in-out, color 0.3s ease-in-out;
   i {
     backdrop-filter: blur(1px);
     background: $secondaryColorTransparent;
-    padding: 10px 15px;
+    padding: 12px 10px;
     color: $secondaryColor;
     border-radius: 50px;
   }
@@ -543,7 +560,9 @@ a {
 
 %share-product-slide-prev {
   opacity: 1;
-  font-size: 2.5rem;
+  @include fsvg(2.5rem, 2.5rem){
+    fill: $secondaryColor;
+  }
   left: -20px !important;
 }
 
@@ -635,10 +654,17 @@ a {
     color: $secondaryColor;
     font-weight: 500;
     transition: border 0.3s ease-in-out;
-
+    svg{
+      width: 1.3rem;
+      height: 1.3rem;
+      fill: $secondaryColor;
+    }
     &:hover {
       color: $greenSecodaryColor;
       border: 1px solid $greenSecodaryColor;
+      svg path{
+        fill: $greenSecodaryColor;
+      }
     }
   }
 }

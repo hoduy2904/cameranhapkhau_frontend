@@ -5,7 +5,26 @@
 }
 
 @mixin svg{
+  svg {
+    @content;
+  }
+}
+@mixin svg-path{
   svg > path{
     @content;
+  }
+}
+@mixin path{
+  path{
+    @content;
+  }
+}
+@mixin fsvg($width, $height){
+  svg{
+    width: $width;
+    height: $height;
+    path{
+      @content;
+    }
   }
 }

@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 
 html {
@@ -367,6 +367,9 @@ a,
 .navbar-nav .nav-item:hover {
   color: #5180ff;
 }
+.navbar-nav.mobile-menu .nav-item {
+  color: #252525;
+}
 
 .search-bar {
   position: relative;
@@ -441,6 +444,16 @@ a,
 .icon.cart-plus-icon svg > path {
   fill: #fff;
 }
+.icon.xmark-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.icon.xmark-icon svg path {
+  fill: #7e7e7e;
+}
+.icon.bolt-icon path {
+  fill: #fff;
+}
 
 .action {
   align-items: center;
@@ -465,7 +478,7 @@ a,
 .action .action-item:hover span {
   color: #233e92;
 }
-.action .action-item:hover i svg > path {
+.action .action-item:hover i svg {
   fill: #233e92;
 }
 .action span {
@@ -613,14 +626,20 @@ a,
   position: absolute;
   transform: translateY(-50%);
   z-index: 1;
-  font-size: 2.5rem;
   transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.next svg, .prev svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.next svg path, .prev svg path {
+  fill: #7e7e7e;
 }
 .next i, .prev i {
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   background: rgba(236, 236, 236, 0.7215686275);
-  padding: 10px 15px;
+  padding: 12px 10px;
   color: #7e7e7e;
   border-radius: 50px;
 }
@@ -641,8 +660,14 @@ a,
 
 .slide-lazy .prev, .products .prev {
   opacity: 1;
-  font-size: 2.5rem;
   left: -20px !important;
+}
+.slide-lazy .prev svg, .products .prev svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.slide-lazy .prev svg path, .products .prev svg path {
+  fill: #7e7e7e;
 }
 
 .slide-lazy .next, .products .next {
@@ -715,9 +740,17 @@ a,
   font-weight: 500;
   transition: border 0.3s ease-in-out;
 }
+.category-action .action-circle svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: #7e7e7e;
+}
 .category-action .action-circle:hover {
   color: #3bb77e;
   border: 1px solid #3bb77e;
+}
+.category-action .action-circle:hover svg path {
+  fill: #3bb77e;
 }
 
 .slide-item {
@@ -1215,10 +1248,10 @@ iframe.skiptranslate {
   background: #233e92;
   color: #fff;
 }
-.product-infomation .product-extra .compare:hover i svg > path {
+.product-infomation .product-extra .compare:hover i svg {
   fill: #fff;
 }
-.product-infomation .product-extra .compare .icon.compare-icon svg > path {
+.product-infomation .product-extra .compare .icon.compare-icon svg {
   fill: #233e92;
 }
 .product-infomation .product-parameter {
