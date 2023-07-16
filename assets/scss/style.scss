@@ -331,7 +331,7 @@ a {
   }
   .badge {
     position: absolute;
-    background: $whiteColor;
+    background: $redColor;
     padding: 5px;
     border-radius: 50px;
     color: $primaryColor;
@@ -823,9 +823,7 @@ iframe.skiptranslate {
   opacity: 0;
   height: 100vh;
   top: 0;
-  background: #ffffffcf;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: #fff;
   transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
   &.show {

@@ -453,7 +453,7 @@ a,
 }
 .action .badge {
   position: absolute;
-  background: #fff;
+  background: #dc3545;
   padding: 5px;
   border-radius: 50px;
   color: #191970;
@@ -932,9 +932,7 @@ iframe.skiptranslate {
   opacity: 0;
   height: 100vh;
   top: 0;
-  background: rgba(255, 255, 255, 0.8117647059);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: #fff;
   transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .sidebar-mobile.show {
@@ -1016,7 +1014,7 @@ iframe.skiptranslate {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1460px;
+    max-width: 1320px;
   }
 }
 .title {
