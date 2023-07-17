@@ -1686,4 +1686,12 @@ iframe.skiptranslate {
 
 .form-VAT {
   margin-top: 8px;
+}
+
+.category-title .main-title {
+  font-size: 1.6rem;
+}
+
+.filter-content {
+  color: #403f3f;
 }/*# sourceMappingURL=style.css.map */
