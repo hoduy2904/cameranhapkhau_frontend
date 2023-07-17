@@ -177,6 +177,8 @@ a {
   @include flex(center, space-between);
 
   .menu-bar__title {
+    cursor: pointer;
+    user-select: none;
     font-size: 1.5rem;
     color: $whiteColor;
     font-weight: 600;
@@ -861,6 +863,7 @@ a {
     }
   }
   .add-to-cart {
+    user-select: none;
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
     cursor: pointer;
     opacity: 0;
@@ -873,6 +876,9 @@ a {
     color: #fff;
     border-radius: 50px;
     text-align: center;
+    @include mobile {
+      display: none;
+    }
   }
 }
 .price {
@@ -968,16 +974,17 @@ iframe.skiptranslate {
       }
     }
     .nav-item {
-      padding: 10px 0;
-      border-bottom: 1px solid $lineColor;
       .dropdown {
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
+        float: left;
+      }
+      .icon {
+        float: right;
       }
       @extend %share-navitem-dropdown-item;
       .dropdown-menu {
         border: none;
+        float: left;
+        width: 100%;
         background: inherit;
         font-size: inherit;
         font-weight: inherit;
@@ -989,6 +996,15 @@ iframe.skiptranslate {
           color: inherit;
           &:hover {
             color: $greenSecodaryColor;
+          }
+          .nav-link {
+            width: 85%;
+            text-wrap: wrap;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            text-overflow: ellipsis;
           }
         }
       }

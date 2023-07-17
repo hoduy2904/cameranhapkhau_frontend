@@ -60,7 +60,7 @@ $(function(){
     ],
   });
   
-  $(".dropdown").on("click", function (e) {
+  $(".nav-item .icon").on("click", function (e) {
     $(this).parent().toggleClass("active");
     $(this).parent().children(".dropdown-menu").slideToggle();
   });
@@ -105,4 +105,12 @@ $(function(){
   const observer = new IntersectionObserver(obcallBack, options)
   
   document.querySelectorAll('.lazy-img').forEach(img => { observer.observe(img) });
+  
+  $(".tab-item").on("click", function () {
+    $(".tab-item").removeClass("active");
+    $(this).addClass("active");
+    let currentTab = $(this).attr("data-tab");
+    $(".tab-content").removeClass("active");
+    $(`#${currentTab}`).addClass("active");
+  });
   });

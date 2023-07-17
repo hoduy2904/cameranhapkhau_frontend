@@ -40,14 +40,23 @@
 }
 .product-name {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: {
     bottom: 8px;
   }
 }
 .product-rate {
+  text-wrap: nowrap;
   p {
     color: $secondaryColor;
+  }
+  .sku {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
   }
 }
 
@@ -108,15 +117,19 @@
     }
     %btn {
       margin-top: 5px;
-      padding: 15px;
+      padding: 16px;
       font-weight: 600;
       border: none;
       border-radius: $borderRadiusButton;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
     .add-to-card {
       @extend %btn;
       color: $whiteColor;
-      background: $primaryColor;
+      background: $primaryLightColor;
       flex: 1;
       &:hover {
         background: $primaryBoldColor;
@@ -140,14 +153,14 @@
       &:hover {
         background: $primaryColor;
         color: $whiteColor;
-        i {
-          @include svg {
+        .icon.compare-icon {
+          @include svg-path {
             fill: $whiteColor;
           }
         }
       }
       .icon.compare-icon {
-        @include svg {
+        @include svg-path {
           fill: $primaryColor;
         }
       }
