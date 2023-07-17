@@ -45,8 +45,8 @@
     bottom: 8px;
   }
 }
-.product-rate{
-  p{
+.product-rate {
+  p {
     color: $secondaryColor;
   }
 }
@@ -117,8 +117,8 @@
       @extend %btn;
       color: $whiteColor;
       background: $primaryColor;
-      flex:1;
-      &:hover{
+      flex: 1;
+      &:hover {
         background: $primaryBoldColor;
       }
     }
@@ -127,33 +127,33 @@
       background: $redColor;
       @extend %btn;
       width: 100%;
-      &:hover{
+      &:hover {
         background: $darkRedColor;
       }
     }
     .compare {
-      flex:1;
+      flex: 1;
       background: $whiteColor;
       @extend %btn;
       border: 1px solid $primaryColor;
-      color: $primaryColor;;
-      &:hover{
+      color: $primaryColor;
+      &:hover {
         background: $primaryColor;
         color: $whiteColor;
-        i{
-          @include svg{
+        i {
+          @include svg {
             fill: $whiteColor;
           }
         }
       }
-      .icon.compare-icon{
-        @include svg{
+      .icon.compare-icon {
+        @include svg {
           fill: $primaryColor;
         }
       }
     }
   }
-  
+
   .product-parameter {
     margin: 5px 0;
     font-size: 14px;
@@ -314,7 +314,7 @@
   }
 }
 .special-offer {
-  border: 1px solid rgba($redColor,0.2);
+  border: 1px solid rgba($redColor, 0.2);
   border-radius: $borderRadiusButton;
   .special-offer-title {
     padding: 10px;

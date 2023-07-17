@@ -426,9 +426,6 @@ a,
   font-size: 16px;
 }
 
-.icon svg > path {
-  fill: #252525;
-}
 .icon.search-icon svg > path {
   fill: #7e7e7e;
 }
@@ -453,6 +450,12 @@ a,
 }
 .icon.bolt-icon path {
   fill: #fff;
+}
+.icon.compare-icon svg > path {
+  fill: #252525;
+}
+.icon.cart-icon svg > path {
+  fill: #252525;
 }
 
 .action {
@@ -892,7 +895,7 @@ a,
   text-overflow: ellipsis;
   background: #e5f8ed;
   color: #038e42;
-  top: 40px;
+  top: 5px;
   left: 5px;
 }
 @media screen and (max-width: 1042px) {
@@ -901,14 +904,16 @@ a,
     padding: unset;
   }
 }
-.product .product-category.not-promotion {
-  top: 5px;
-}
 .product .product-promotion {
   background: #dc3545;
   color: #fff;
-  top: 5px;
+  top: 40px;
   left: 5px;
+}
+@media screen and (max-width: 768px) {
+  .product .product-promotion {
+    top: 5px;
+  }
 }
 .product .status {
   margin: 5px 0;

@@ -4,7 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    fill 0.3s ease-in-out;
 }
 html {
   font-size: 62.5%;
@@ -247,8 +248,8 @@ a {
       color: $primaryLightColor;
     }
   }
-  &.mobile-menu{
-    .nav-item{
+  &.mobile-menu {
+    .nav-item {
       color: $blackColor;
     }
   }
@@ -312,43 +313,50 @@ a {
 }
 
 // Icon
-.icon{
-  @include svg-path{
-    fill: $blackColor;
-  }
-  &.search-icon{
-    @include svg-path{
+.icon {
+  &.search-icon {
+    @include svg-path {
       fill: $secondaryColor;
     }
   }
-  &.icon-headphones{
-    @include svg-path{
+  &.icon-headphones {
+    @include svg-path {
       fill: $whiteColor;
     }
   }
-  &.gift-icon{
-    @include svg-path{
+  &.gift-icon {
+    @include svg-path {
       fill: $redColor;
     }
   }
-  &.money-icon{
-    @include svg-path{
+  &.money-icon {
+    @include svg-path {
       fill: $whiteColor;
     }
   }
-  &.cart-plus-icon{
-    @include svg-path{
+  &.cart-plus-icon {
+    @include svg-path {
       fill: $whiteColor;
     }
   }
-  &.xmark-icon{
-    @include fsvg(24px,24px){
+  &.xmark-icon {
+    @include fsvg(24px, 24px) {
       fill: $secondaryColor;
     }
   }
-  &.bolt-icon{
-    @include path{
+  &.bolt-icon {
+    @include path {
       fill: $whiteColor;
+    }
+  }
+  &.compare-icon {
+    @include svg-path {
+      fill: $blackColor;
+    }
+  }
+  &.cart-icon {
+    @include svg-path {
+      fill: $blackColor;
     }
   }
 }
@@ -371,12 +379,12 @@ a {
       font-size: 2.4rem;
     }
 
-    &:hover{
-      span{
+    &:hover {
+      span {
         color: $primaryColor;
       }
-      i{
-        @include svg{
+      i {
+        @include svg {
           fill: $primaryColor;
         }
       }
@@ -528,7 +536,7 @@ a {
   position: absolute;
   transform: translateY(-50%);
   z-index: 1;
-  @include fsvg(2.5rem, 2.5rem){
+  @include fsvg(2.5rem, 2.5rem) {
     fill: $secondaryColor;
   }
   transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out,
@@ -560,7 +568,7 @@ a {
 
 %share-product-slide-prev {
   opacity: 1;
-  @include fsvg(2.5rem, 2.5rem){
+  @include fsvg(2.5rem, 2.5rem) {
     fill: $secondaryColor;
   }
   left: -20px !important;
@@ -654,7 +662,7 @@ a {
     color: $secondaryColor;
     font-weight: 500;
     transition: border 0.3s ease-in-out;
-    svg{
+    svg {
       width: 1.3rem;
       height: 1.3rem;
       fill: $secondaryColor;
@@ -662,7 +670,7 @@ a {
     &:hover {
       color: $greenSecodaryColor;
       border: 1px solid $greenSecodaryColor;
-      svg path{
+      svg path {
         fill: $greenSecodaryColor;
       }
     }
@@ -793,9 +801,6 @@ a {
       position: unset;
       padding: unset;
     }
-    &.not-promotion {
-      top: 5px;
-    }
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -803,15 +808,18 @@ a {
     text-overflow: ellipsis;
     background: $bgGreenColor;
     color: $GreenColor;
-    top: 40px;
+    top: 5px;
     left: 5px;
   }
   .product-promotion {
     @extend %share-product-category-promotion;
     background: $redColor;
     color: $whiteColor;
-    top: 5px;
+    top: 40px;
     left: 5px;
+    @include mobile {
+      top: 5px;
+    }
   }
   .status {
     margin: 5px 0;
@@ -840,14 +848,14 @@ a {
       font-size: 1.4rem;
     }
   }
-  .rating{
+  .rating {
     display: flex;
     align-items: center;
-    .avg-rate{
+    .avg-rate {
       color: $redColor;
       font-weight: 600;
     }
-    span{
+    span {
       color: $secondaryColor;
       font-weight: 600;
     }
