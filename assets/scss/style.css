@@ -1694,4 +1694,45 @@ iframe.skiptranslate {
 
 .filter-content {
   color: #403f3f;
+}
+
+.filter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.filter .form-group {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.filter select {
+  margin-left: 5px;
+  outline: none;
+  border: none;
+  color: #403f3f;
+}
+.filter select option {
+  border: none;
+  border-radius: 5px;
+}
+.filter select option:hover {
+  background: #233e92;
+  color: #fff;
+}
+.filter .icon.filter-icon svg > path {
+  fill: #233e92;
+}
+
+.showing {
+  color: #7e7e7e;
+}
+
+.product-category .products {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .product-category .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
