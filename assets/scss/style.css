@@ -1513,6 +1513,10 @@ iframe.skiptranslate {
   border-bottom: 1px solid #ececec;
   overflow: hidden;
 }
+.news .news-item > a, .news .news-item .news-item > a, .news .menu ul li .news-item > span, .menu ul li .news .news-item > span, .menu ul li .news .news-item .news-item > span, .news .menu ul li .news-item .news-item > span {
+  display: block;
+  overflow: hidden;
+}
 .news .news-item .temp-image {
   max-width: 250px;
   float: left;
@@ -1560,6 +1564,8 @@ iframe.skiptranslate {
   list-style: none;
 }
 .category-menu.category-summary > li.category-item {
+  width: 100%;
+  overflow: hidden;
   padding: 3px 0;
   float: none;
   background: transparent;
