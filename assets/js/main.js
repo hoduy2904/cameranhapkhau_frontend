@@ -113,4 +113,17 @@ $(function(){
     $(".tab-content").removeClass("active");
     $(`#${currentTab}`).addClass("active");
   });
+
+      $("#btnTracking").on("click", function () {
+        $(".tracking-result").slideToggle();
+      });
+      
+      $(".form-check-input").on("click", function () {
+        console.log($(this));
+        if ($(this).is(":checked")) {
+          $(".form-VAT").show("slide");
+        } else {
+          $(".form-VAT").hide("slide");
+        }
+      });
   });
