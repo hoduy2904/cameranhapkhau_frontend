@@ -112,3 +112,23 @@
 .bg-white {
   background: $whiteColor;
 }
+.bg-primary {
+  background: $primaryColor;
+}
+
+.toastify {
+  min-width: 100px;
+  &.toast-default {
+    background: $primaryColor;
+    border-radius: 5px;
+  }
+  &.toast-error {
+    background: $redColor;
+    color: $whiteColor;
+    border-radius: 5px;
+  }
+  &.toast-success {
+    background: $GreenColor;
+    border-radius: 5px;
+  }
+}

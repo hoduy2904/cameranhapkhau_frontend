@@ -126,4 +126,70 @@ $(function(){
           $(".form-VAT").hide("slide");
         }
       });
+
+      $('.add-to-cart').on('click',function(e){
+        e.preventDefault();
+        let id = $(this).attr('data-id');
+        let optionPrice = $('input[name=option-price]:checked').val()??1;
+        let color = $('input[name=color]:checked').attr('id');
+        addCart(id,optionPrice,color);
+      })
+
+      $('.buy-now').on('click',function(e){
+        e.preventDefault();
+      })
+
+      let addCart = function(id, number = 1, colorId=null) {
+        $.ajax({
+            url: '/api/cart/add',
+            method: "POST",
+            data: {
+                id,
+                number,
+                colorId
+            },
+            success: function(data) {
+                if (data.status == 200) {
+                    showToast("Thêm giỏ hàng thành công");
+                    $('#cartCount').html(data.count);
+                }else{
+                    showToast(data.message);
+                }
+            },
+            error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              showToast(err.message,"error");
+            }
+        })
+    }
+
+      function showToast(text, type){
+        let className = 'toast-default';
+        switch(type){
+          case "error":{
+            className = 'toast-error';
+            break;
+          }
+          case "success":{
+            className = 'toast-success';
+            break;
+          }
+          case "warning":{
+            className='toast-warning'
+            break;
+          }
+          default: break;
+        }
+
+        Toastify({
+          text: text,
+          className: className,
+          close: true,
+          offset: {
+            x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        }).showToast();
+      }
+      
   });

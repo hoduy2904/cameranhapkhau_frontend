@@ -592,7 +592,6 @@ a {
 
 .flash-sale__products {
   visibility: hidden;
-  display: flex;
   overflow: hidden;
   &.slick-initialized {
     overflow: unset;
@@ -708,6 +707,8 @@ a {
   color: $blackColor;
 }
 .flash-sale {
+  max-height: 550px;
+  overflow: hidden;
   padding: 20px;
   background-color: $redColor;
   border-radius: $sectionConner;
