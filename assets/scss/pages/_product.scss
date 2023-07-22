@@ -118,10 +118,11 @@
     %btn {
       margin-top: 5px;
       padding: 16px;
-      font-weight: 600;
+      font-weight: 500;
       border: none;
       border-radius: $borderRadiusButton;
       outline: none;
+      text-transform: uppercase;
       &:focus {
         outline: none;
       }
@@ -169,7 +170,7 @@
 
   .product-parameter {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 13px;
     color: $secondaryColor;
     font-weight: 600;
     span:last-child {
