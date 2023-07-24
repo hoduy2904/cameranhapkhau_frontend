@@ -195,14 +195,13 @@ $(function () {
     }).showToast();
   }
 
-  $(".filter-item").on("click", function () {
-    if ($(this).children(".filter-content").is(":hidden")) {
-      $(this).children(".category-title").children(".end-icon").html("-");
-      console.log($(this).children(".category-title").children(".end-icon"));
+  $(".filter-item .category-title").on("click", function () {
+    if ($(this).parent('.filter-item').children(".filter-content").is(":hidden")) {
+      $(this).children(".end-icon").html("-");
     } else {
-      $(this).children(".category-title").children(".end-icon").html("+");
+      $(this).children(".end-icon").html("+");
     }
-    $(this).children(".filter-content").slideToggle();
+    $(this).parent('.filter-item').children(".filter-content").slideToggle();
   });
 
   $(".filters-title .xmark-icon").on("click", function () {

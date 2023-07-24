@@ -27,7 +27,7 @@
     visibility: hidden;
     left: -100%;
     top: 0;
-    height: 100vh;
+    height: 100%;
     padding: 0;
     width: 90%;
     z-index: 1;
@@ -85,6 +85,7 @@
   .filter-button {
     display: flex;
     column-gap: 10px;
+    border-bottom: none;
     button {
       flex: 1;
     }
@@ -108,6 +109,9 @@
 }
 .filter-content {
   color: #403f3f;
+  li {
+    padding: 2px 0;
+  }
 }
 .filter {
   display: flex;
