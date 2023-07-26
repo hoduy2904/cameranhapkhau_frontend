@@ -132,16 +132,23 @@ $(function () {
   $(".add-to-cart").on("click", function (e) {
     e.preventDefault();
     let id = $(this).attr("data-id");
-    let optionPrice = $("input[name=option-price]:checked").val() ?? 1;
-    let color = $("input[name=color]:checked").attr("id");
+    let dataType = $(this).attr("data-type");
+    if(dataType=="product"){
+    var optionPrice = $("input[name=option-price]:checked").val() ?? 1;
+    var color = $("input[name=color]:checked").attr("id");
+  }
     addCart(id, optionPrice, color);
   });
 
   $(".buy-now").on("click", function (e) {
     e.preventDefault();
+    let id = $(this).attr("data-id");
+    var optionPrice = $("input[name=option-price]:checked").val() ?? 1;
+    var color = $("input[name=color]:checked").attr("id");
+    addCart(id, optionPrice,color,true);
   });
 
-  let addCart = function (id, number = 1, colorId = null) {
+  let addCart = function (id, number = 1, colorId = null, redirect=false) {
     $.ajax({
       url: "/api/cart/add",
       method: "POST",
@@ -154,6 +161,9 @@ $(function () {
         if (data.status == 200) {
           showToast("Thêm giỏ hàng thành công");
           $("#cartCount").html(data.count);
+          if(redirect){
+            window.location.href="/gio-hang";
+          }
         } else {
           showToast(data.message);
         }
@@ -164,6 +174,61 @@ $(function () {
       },
     });
   };
+
+  function deleteCart(id){
+      let isSuccess=false;
+      $.ajax({
+          url: "/api/cart/delete",
+          method: "DELETE",
+          data: {
+            id
+          },
+          async: false,
+          success: function (data) {
+            if (data.status == 200) {
+              showToast("Xóa thành công");
+              $("#cartCount").html(data.count);
+              isSuccess = true;
+            } else {
+              showToast(data.message);
+              isSuccess = false;
+            }
+          },
+          error: function (xhr, status, error) {
+            var err = eval("(" + xhr.responseText + ")");
+            showToast(err.message, "error");
+            isSuccess = false;
+          },
+        });
+        return isSuccess;
+  }
+
+  function editCart(id,number){
+      let isSuccess=false;
+      $.ajax({
+          url: "/api/cart/update",
+          method: "PUT",
+          data: {
+            id,
+            number
+          },
+          async: false,
+          success: function (data) {
+            if (data.status == 200) {
+              showToast("Cập nhật thành công");
+              isSuccess = true;
+            } else {
+              isSuccess = false;
+            }
+          },
+          error: function (xhr, status, error) {
+            var err = eval("(" + xhr.responseText + ")");
+            showToast(err.message, "error");
+            isSuccess = false;
+          },
+        });
+        return isSuccess;
+  }
 
   function showToast(text, type) {
     let className = "toast-default";
@@ -212,4 +277,102 @@ $(function () {
     e.preventDefault();
     $(".filters").toggleClass("active");
   });
+
+  $('.btn-trash-cart').on('click',function(e){
+      let parent = $(this).parent('tr');
+      let id =parent.attr("id");
+      let result = deleteCart(id);
+      if(result){
+          parent.remove();
+      }
+  });
+
+  onChangeInput((element, value,current) => {
+      let parent = $(element).parents("tr");
+      let id = parent.attr("id");
+      let result = editCart(id,value);
+      if(!result){
+          $(element).parent().children(".qty").val(current);
+      }else{
+          let price = parent.children("td:nth-child(4)").attr("data-price");
+          let totalPrice = parent.children("td:nth-child(5)");
+          totalPrice.html((price*value).toLocaleString("vi-VN").replaceAll(".",","));
+          totalCartMoney();
+      }
+  });
+
+  $('.qty').on('focusin', function(){
+      $(this).data('prevVal', $(this).val());
+  });
+
+  $('.qty').on('change',function(){
+      let value = $(this).val();
+      let parent = $(this).parents("tr");
+      let id = parent.attr("id");
+      let result = editCart(id,value);
+          
+      if(!result){
+          let prev= $(this).data("prevVal");
+          $(this).val(prev);
+      }else{
+          let price = parent.children("td:nth-child(4)").attr("data-price");
+          let totalPrice = parent.children("td:nth-child(5)");
+          totalPrice.html((price*value).toLocaleString("vi-VN").replaceAll(".",","));
+          totalCartMoney();
+      }
+  });
+  function totalCartMoney(){
+      let total = 0;
+      let allCart = $('.moneyCartItem');
+      allCart.each((index, obj)=>{
+          let money = parseInt($(obj).html().replaceAll(",",""))??0;
+          total+=money;
+      });
+      $('#totalCartMoney').html(total.toLocaleString("vi-VN").replaceAll(".",","));
+  }
+
+    function onChangeInput(callback) {
+      var input;
+      var btnminus = $(".qty-minus");
+      var btnplus = $(".qty-plus");
+
+      if (
+        btnminus !== undefined &&
+        btnplus !== undefined &&
+        btnminus !== null &&
+        btnplus !== null
+      ) {
+        function qtyminus(e) {
+          input = $($(this).parent().children(".qty"));
+          var min = Number(input.attr("min"));
+          var step = Number(input.attr("step"));
+          var current = Number(input.val());
+          var newval = current - step;
+          if (newval < min) {
+            newval = min;
+          }
+          input.val(Number(newval));
+          e.preventDefault();
+          if (input != null && input != undefined) {
+            callback(input, newval,current);
+          }
+        }
+
+        function qtyplus(e) {
+          input = $($(this).parent().children(".qty"));
+          var min = Number(input.attr("min"));
+          var step = Number(input.attr("step"));
+          var current = Number(input.val());
+          var newval = current + step;
+          input.val(Number(newval));
+          e.preventDefault();
+          if (input != null && input != undefined) {
+            callback(input, newval,current);
+          }
+        }
+
+        btnminus.on("click", qtyminus);
+        btnplus.on("click", qtyplus);
+      } // End if test
+    }
 });

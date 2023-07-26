@@ -361,6 +361,12 @@ a {
       fill: $blackColor;
     }
   }
+  &.trash-icon {
+    cursor: pointer;
+    @include fsvg(16px, 16px) {
+      fill: $redColor;
+    }
+  }
 }
 
 .action {

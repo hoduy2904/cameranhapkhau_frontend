@@ -482,6 +482,16 @@ a,
 .icon.cart-icon svg > path {
   fill: #252525;
 }
+.icon.trash-icon {
+  cursor: pointer;
+}
+.icon.trash-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.icon.trash-icon svg path {
+  fill: #dc3545;
+}
 
 .action {
   align-items: center;
