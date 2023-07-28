@@ -52,7 +52,7 @@ a {
     border-radius: 12px;
   }
   &.section-bg-one {
-    background-color: #121226;
+    background-color: $primaryColor;
     .category-title .main-title {
       color: $whiteColor;
     }
@@ -247,7 +247,7 @@ a {
     color: $whiteColor;
 
     &:hover {
-      color: $primaryLightColor;
+      color: #fff34a;
     }
   }
   &.mobile-menu {
@@ -657,7 +657,7 @@ a {
   }
 }
 .sub-title {
-  color: $secondaryColor;
+  color: $whiteColor;
   font-size: 1.4rem;
 }
 .category-action {
