@@ -1731,6 +1731,34 @@ iframe.skiptranslate {
   margin-top: 8px;
 }
 
+.table-order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .table-order {
+    position: unset;
+    transform: unset;
+  }
+}
+.table-order table thead {
+  background-color: #233e92;
+  color: #fff;
+  font-weight: 600;
+}
+.table-order table tr td {
+  padding: 8px;
+}
+.table-order table tfoot {
+  border-top: 2px solid #cdcdcd;
+  border-bottom: 2px solid #cdcdcd;
+}
+.table-order table tfoot tr {
+  font-weight: 600;
+}
+
 .filters .category-title {
   -webkit-user-select: none;
      -moz-user-select: none;

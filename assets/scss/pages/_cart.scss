@@ -50,3 +50,35 @@
 .form-VAT {
   margin-top: 8px;
 }
+
+.table-order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mobile {
+    position: unset;
+    transform: unset;
+  }
+  table {
+    thead {
+      background-color: $primaryColor;
+      color: $whiteColor;
+      font-weight: 600;
+    }
+    tr {
+      td {
+        padding: 8px;
+      }
+    }
+    tfoot {
+      border: {
+        top: 2px solid #cdcdcd;
+        bottom: 2px solid #cdcdcd;
+      }
+      tr {
+        font-weight: 600;
+      }
+    }
+  }
+}
