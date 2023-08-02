@@ -155,10 +155,73 @@ a {
 
   .services {
     @include flex(unset, space-between);
-
+    position: relative;
     img {
       max-height: 40px;
       max-width: 60px;
+    }
+    .search-result {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.1);
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $whiteColor;
+      height: 400px;
+      z-index: 2;
+      border-radius: $borderRadius;
+      &.active {
+        display: flex;
+      }
+      .top-search-result {
+        font-size: 13px;
+        background: $lineColor;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        button {
+          outline: none;
+          border: none;
+          color: $primaryColor;
+        }
+      }
+      .body-search-result {
+        padding: 0 10px;
+        flex: 1;
+        overflow: auto;
+        &::-webkit-scrollbar-thumb {
+          background: $primaryColor;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+        .item-search-result {
+          border-bottom: 1px solid $lineColor;
+          padding: 8px 0;
+          display: flex;
+          .item-image {
+            width: 80px;
+            img {
+              width: 100%;
+            }
+          }
+
+          .item-information {
+            flex: 1;
+            .item-title {
+              font-size: 1.4rem;
+            }
+            .price {
+              font-size: 1.4rem;
+              color: $redColor;
+            }
+          }
+        }
+      }
     }
   }
 }
