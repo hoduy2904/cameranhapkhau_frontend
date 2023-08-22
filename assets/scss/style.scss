@@ -187,6 +187,10 @@ a {
           color: $primaryColor;
         }
       }
+      .body-search-loading {
+        display: none;
+        flex: 1;
+      }
       .body-search-result {
         padding: 0 10px;
         flex: 1;
